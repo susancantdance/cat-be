@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "prisma migrate deploy && node app.js"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",
