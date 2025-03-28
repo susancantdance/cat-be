@@ -31,7 +31,7 @@ indexRouter.post(
   "/login/password",
   passport.authenticate("local", {
     session: false,
-    failureRedirect: "/login",
+  //  failureRedirect: "http:/login",
   }),
   controller.postLogin
 );
