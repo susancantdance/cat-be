@@ -16,6 +16,9 @@ const indexRouter = require("./routes/indexRouter");
 const postRouter = require("./routes/postRouter");
 const db = require("./db/queries");
 
+app.options("*", cors());
+app.use(cors());
+
 let opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = process.env.SECRET;
