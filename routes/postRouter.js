@@ -17,6 +17,7 @@ postRouter.post(
 );
 postRouter.post(
   "/:postid/comments",
+  cors(),
   passport.authenticate("jwt", { session: false, passReqToCallback: true }),
   postController.createComment
 );
