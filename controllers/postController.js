@@ -33,7 +33,7 @@ async function createPost(req, res, next) {
 //update content of post
 async function updatePost(req, res, next) {
   const updated = await db.updatePost(
-    +req.params.postid,
+    +req.body.postid,
     req.body.title,
     req.body.body,
     req.body.ispublished
