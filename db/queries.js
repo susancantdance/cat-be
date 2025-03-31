@@ -121,7 +121,6 @@ async function updatePost(id, title, body, publish) {
       ispublished: publish,
     },
   });
-
   return updatedpost;
 }
 
