@@ -25,7 +25,7 @@ async function createPost(req, res, next) {
     req.body.title,
     req.body.body,
     +req.body.authorid, //how do we get this?
-    req.body.ispublished
+    req.body.ispublished === "true"
   );
   res.json(newpost);
 }
@@ -36,7 +36,7 @@ async function updatePost(req, res, next) {
     +req.body.postid,
     req.body.title,
     req.body.body,
-    req.body.ispublished
+    req.body.ispublished === "true"
   );
   res.json(updated);
 }
