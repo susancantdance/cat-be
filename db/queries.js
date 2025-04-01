@@ -111,6 +111,8 @@ async function createPost(title, body, authorid, publish) {
 
 //update or publish a post
 async function updatePost(id, title, body, publish) {
+  console.log("DB UPDATE FUNC");
+  console.log(publish === "true");
   const updatedpost = await prisma.post.update({
     where: {
       id: id,
