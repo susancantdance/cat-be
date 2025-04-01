@@ -33,12 +33,12 @@ async function createPost(req, res, next) {
 //update content of post
 async function updatePost(req, res, next) {
   console.log("THIS IS THE UPDATE POST FUNCT");
-  console.log(req.body.ispublished === "true");
+  console.log(req.body.ispublished === true);
   const updated = await db.updatePost(
     +req.body.postid,
     req.body.title,
     req.body.body,
-    req.body.ispublished === "true"
+    req.body.ispublished === true
   );
   res.json(updated);
 }
